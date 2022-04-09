@@ -1,16 +1,16 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Hello from './src/components/Hello';
+import { StyleSheet, View } from 'react-native';
+
+import AppBar from './src/components/AppBar';
+import MemoList from './src/components/MemoList';
+import CircleButton from './src/components/CircleButton';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Hello bang>World</Hello>
-      <Hello style={{ fontSize: 16 }}>Small World</Hello>
-      <Text>Open up App.js to start working on your app!</Text>
-      {/* eslint-disable-next-line */}
-      <StatusBar style="auto" />
+      <AppBar />
+      <MemoList />
+      <CircleButton>+</CircleButton>
     </View>
   );
 }
@@ -18,8 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f0f4f8',
   },
 });
